@@ -142,7 +142,7 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
-    padding: calc(var(--spacing-lg) + 80px) 2rem var(--spacing-lg) 2rem;
+    padding: calc(var(--spacing-lg) + 40px) 2rem var(--spacing-lg) 2rem;
     overflow: hidden;
 }
 
@@ -290,6 +290,21 @@ section {
     display: flex;
     align-items: center;
     gap: 1.5rem;
+    flex-wrap: wrap
+}
+
+view-github-btn {
+    margin-left: auto;
+    padding: 0.75rem 1.5rem;
+    background: rgba(0, 255, 170, 0.1);
+    border: 1px solid var(--accent-primary);
+    border-radius: var(--radius-sm);
+    color: var(--accent-primary);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all var(--transition-normal);
+    white-space: nowrap;
 }
 
 .section-number {
