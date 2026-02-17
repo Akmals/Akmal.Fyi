@@ -217,8 +217,8 @@ document.head.appendChild(activeLinkStyle);
 // CONSOLE MESSAGE (Easter Egg)
 // Fun message for developers who open the console
 // ===================================
-console.log('%c👋 Hey there, fellow developer!', 'color: #00ffaa; font-size: 20px; font-weight: bold;');
-console.log('%cLooking at the code? Nice! Feel free to reach out if you want to collaborate.', 'color: #a0a0a0; font-size: 14px;');
+console.log('%cHey there', 'color: #00ffaa; font-size: 20px; font-weight: bold;');
+console.log('%cFeel free to reach out if you want to collaborate.', 'color: #a0a0a0; font-size: 14px;');
 console.log('%cThis site was built with vanilla HTML, CSS, and JavaScript.', 'color: #a0a0a0; font-size: 14px;');
 
 // ===================================
