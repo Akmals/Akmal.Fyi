@@ -1,4 +1,4 @@
-# Personal Website - Akmal Kuchkarov
+# Personal Website - Akmal.fyi
 
 A sleek, minimalist dark-themed personal portfolio website built with vanilla HTML, CSS, and JavaScript.
 
