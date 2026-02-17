@@ -142,7 +142,7 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
-    padding: var(--spacing-lg) 2rem;
+    padding: calc(var(--spacing-lg) + 80px) 2rem var(--spacing-lg) 2rem;
     overflow: hidden;
 }
 
