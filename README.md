@@ -9,3 +9,5 @@ This website follows minimalist design language with:
 - Dark theme with cyan/green accent colors
 - Smooth animations and transitions
 - Responsive design that works on all devices
+
+### Currently Hosted on Github Pages--
