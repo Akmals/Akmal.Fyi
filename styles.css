@@ -293,7 +293,7 @@ section {
     flex-wrap: wrap
 }
 
-view-github-btn {
+.view-github-btn {
     margin-left: auto;
     padding: 0.75rem 1.5rem;
     background: rgba(0, 255, 170, 0.1);
