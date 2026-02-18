@@ -296,20 +296,21 @@ section {
 .view-github-btn {
     margin-left: auto;
     padding: 0.75rem 1.5rem;
-    background: rgba(0, 255, 170, 0.1);
-    border: 1px solid var(--accent-primary);
+    background: rgba(0, 255, 170, 0.1) !important;
+    border: 1px solid var(--accent-primary) !important;
     border-radius: var(--radius-sm);
-    color: var(--accent-primary);
-    text-decoration: none;
+    color: var(--accent-primary) !important;
+    text-decoration: none !important;
     font-weight: 600;
     font-size: 0.95rem;
     transition: all var(--transition-normal);
     white-space: nowrap;
+    display: inline-block;
 }
 
 .view-github-btn:hover {
-    background: var(--accent-primary);
-    color: var(--bg-primary);
+    background: var(--accent-primary) !important;
+    color: var(--bg-primary) !important;
     transform: translateX(5px);
 }
 
@@ -538,7 +539,7 @@ section {
 /* Contact Form Styles */
 .contact-form-wrapper {
     grid-column: 1 / -1;
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto var(--spacing-lg) auto;
 }
 
