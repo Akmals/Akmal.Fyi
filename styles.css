@@ -98,8 +98,6 @@ body {
     text-decoration: none;
     font-size: 0.95rem;
     font-weight: 500;
-    position: relative;
-    transition: color var(--transition-normal);
 }
 
 .nav-links a:hover {
@@ -189,11 +187,16 @@ section {
     opacity: 0.6;
 }
 
+/* Reduced spacing for contact header */
+.contact-header {
+    margin-bottom: var(--spacing-md);
+}
+
 /* ===================================
    ABOUT & PROJECTS
    =================================== */
 .about { background: var(--bg-secondary); }
-.highlight-item, .project-card, .skill-category, .contact-item {
+.highlight-item, .project-card, .skill-category {
     background: var(--bg-tertiary);
     padding: 1.5rem;
     border-radius: var(--radius-md);
@@ -201,33 +204,44 @@ section {
     transition: all var(--transition-normal);
 }
 
-.project-card:hover, .highlight-item:hover, .skill-category:hover, .contact-item:hover {
+.project-card:hover, .highlight-item:hover, .skill-category:hover {
     border-color: var(--accent-primary);
     transform: translateY(-5px);
 }
 
-.projects-grid, .skills-grid, .contact-methods {
+.projects-grid, .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: var(--spacing-md);
 }
 
 /* ===================================
-   CONTACT FORM (FIXED ALIGNMENT)
+   CONTACT SECTION STYLING
    =================================== */
+.contact-text {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto var(--spacing-lg);
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
 .contact-form {
     background: var(--bg-tertiary);
     padding: var(--spacing-md);
     border-radius: var(--radius-md);
     border: 1px solid rgba(255, 255, 255, 0.05);
-    margin-bottom: var(--spacing-lg);
+    margin: 0 auto var(--spacing-lg);
+    max-width: 800px;
     width: 100%;
-    box-sizing: border-box; /* Ensures boxes stay inside the container */
+    box-sizing: border-box;
 }
 
 .form-group {
     margin-bottom: 1.5rem;
     width: 100%;
+    text-align: left;
 }
 
 .form-group label {
@@ -249,14 +263,8 @@ section {
     color: var(--text-primary);
     font-family: var(--font-body);
     font-size: 1rem;
-    box-sizing: border-box; /* Fixes left-shift/overflow issue */
+    box-sizing: border-box;
     transition: border-color var(--transition-normal);
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--accent-primary);
 }
 
 .submit-btn {
@@ -266,23 +274,59 @@ section {
     box-sizing: border-box;
 }
 
+.contact-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-item {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    text-decoration: none;
+    /* Forces white color to prevent purple link text */
+    color: var(--text-primary) !important; 
+    transition: all var(--transition-normal);
+}
+
+.contact-item:visited, .contact-item:active {
+    color: var(--text-primary) !important;
+}
+
+.contact-item:hover {
+    border-color: var(--accent-primary);
+    transform: translateY(-5px);
+}
+
+.contact-icon {
+    font-size: 2rem;
+}
+
+.contact-details h4 {
+    font-family: var(--font-display);
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+}
+
+.contact-details p {
+    color: var(--text-secondary);
+}
+
 .form-status {
     margin-top: 1.5rem;
     padding: 1rem;
     border-radius: var(--radius-sm);
-    font-size: 0.95rem;
     text-align: center;
 }
 
-.form-status.success {
-    background: rgba(0, 255, 170, 0.1);
-    color: var(--accent-primary);
-}
-
-.form-status.error {
-    background: rgba(255, 68, 68, 0.1);
-    color: #ff4444;
-}
+.form-status.success { color: var(--accent-primary); background: rgba(0, 255, 170, 0.1); }
+.form-status.error { color: #ff4444; background: rgba(255, 68, 68, 0.1); }
 
 /* ===================================
    FOOTER
