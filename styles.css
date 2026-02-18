@@ -516,9 +516,8 @@ section {
 
 /* Contact Form Styles */
 .contact-form-wrapper {
-    grid-column: 1 / -1;
-    max-width: 100%;
-    margin: 0 0 var(--spacing-lg) 0;
+    grid-column: span 1;
+    margin: 0;
 }
 
 .contact-form {
@@ -562,7 +561,7 @@ section {
 
 .form-group textarea {
     resize: vertical;
-    min-height: 120px;
+    min-height: 200px;
 }
 
 .submit-btn {
