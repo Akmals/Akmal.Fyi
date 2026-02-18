@@ -516,8 +516,9 @@ section {
 
 /* Contact Form Styles */
 .contact-form-wrapper {
-    grid-column: span 1;
-    margin: 0;
+    grid-column: 1 / -1;
+    max-width: 800px;
+    margin: 0 auto var(--spacing-lg) auto;
 }
 
 .contact-form {
