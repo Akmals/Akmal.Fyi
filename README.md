@@ -10,4 +10,3 @@ This website follows minimalist design language with:
 - Smooth animations and transitions
 - Responsive design that works on all devices
 
-### Currently Hosted on Github Pages--
