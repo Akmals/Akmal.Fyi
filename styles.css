@@ -517,6 +517,71 @@ section {
 }
 
 /* ===================================
+   ART SECTION
+   =================================== */
+.art {
+    background: var(--bg-secondary);
+}
+
+.art-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.art-item {
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+    transition: all var(--transition-normal);
+    cursor: pointer;
+}
+
+.art-item:hover {
+    border-color: var(--accent-primary);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 40px rgba(0, 255, 170, 0.1);
+}
+
+.art-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.art-info {
+    padding: var(--spacing-sm);
+}
+
+.art-info h3 {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.art-info p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.art-placeholder {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: var(--spacing-xl);
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-md);
+    border: 2px dashed rgba(255, 255, 255, 0.1);
+}
+
+.art-placeholder p {
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+}
+
+/* ===================================
    CONTACT SECTION
    =================================== */
 .contact-content {
@@ -683,6 +748,29 @@ section {
     color: var(--text-tertiary);
 }
 
+.footer-links {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color var(--transition-normal);
+    font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+    color: var(--accent-primary);
+}
+
+.footer-separator {
+    color: var(--text-tertiary);
+}
+
 .footer-content p {
     margin-bottom: 0.5rem;
 }
@@ -690,6 +778,41 @@ section {
 .footer-note {
     font-style: italic;
     font-size: 0.9rem;
+}
+
+/* ===================================
+   ART PAGE SPECIFIC STYLES
+   =================================== */
+.art-page {
+    min-height: 100vh;
+    padding-top: calc(var(--spacing-xl) + 80px);
+}
+
+.art-page-header {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.art-page-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 700;
+    margin-bottom: var(--spacing-sm);
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.art-page-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+}
+
+.placeholder-note {
+    font-size: 0.9rem !important;
+    margin-top: 1rem;
+    color: var(--text-tertiary);
 }
 
 /* ===================================
