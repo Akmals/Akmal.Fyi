@@ -447,6 +447,10 @@ section {
 
 .project-footer {
     margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
 }
 
 .project-link {
@@ -461,6 +465,10 @@ section {
 
 .project-link:hover {
     gap: 1rem;
+}
+
+.live-link {
+    color: var(--accent-secondary);
 }
 
 /* ===================================
