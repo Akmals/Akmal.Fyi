@@ -17,7 +17,12 @@ const memes = [
     'memes/meme2.jpg',
     'memes/meme3.jpg',
     'memes/meme4.jpg',
-    'memes/meme5.jpg'
+    'memes/meme5.jpg',
+    'memes/meme6.jpg',
+    'memes/meme7.jpg',
+    'memes/meme8.jpg',
+    'memes/meme9.jpg',
+    'memes/meme10.jpg'
 ];
 
 const quotes = [
