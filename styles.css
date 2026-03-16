@@ -177,6 +177,56 @@ body {
     background-clip: text;
 }
 
+/* Meme + Quote Section */
+.meme-quote-container {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin: var(--spacing-md) 0;
+    max-width: 500px;
+}
+
+.meme-image {
+    flex-shrink: 0;
+}
+
+.meme-image img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--accent-primary);
+}
+
+.speech-bubble {
+    position: relative;
+    background: var(--bg-tertiary);
+    border: 1px solid rgba(0, 255, 170, 0.2);
+    border-radius: var(--radius-sm);
+    padding: 1rem;
+    flex: 1;
+}
+
+.speech-bubble::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid var(--bg-tertiary);
+}
+
+.speech-bubble p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
 .hero-subtitle {
     font-size: clamp(1rem, 2vw, 1.25rem);
     color: var(--text-secondary);
