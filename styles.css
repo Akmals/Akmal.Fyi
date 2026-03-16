@@ -191,11 +191,13 @@ body {
 }
 
 .meme-image img {
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
-    object-fit: cover;
+    object-fit: contain;
     border: 2px solid var(--accent-primary);
+    background: var(--bg-secondary);
+    padding: 8px;
 }
 
 .speech-bubble {
