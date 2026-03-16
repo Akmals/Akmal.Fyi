@@ -10,6 +10,44 @@ setInterval(() => {
 }, 2000); // Change every 2 seconds
 
 // ===================================
+// RANDOM MEME + QUOTE ON PAGE LOAD
+// ===================================
+const memes = [
+    'memes/meme1.jpg',
+    'memes/meme2.jpg',
+    'memes/meme3.jpg',
+    'memes/meme4.jpg',
+    'memes/meme5.jpg'
+];
+
+const quotes = [
+    "The best time to plant a tree was 20 years ago. The second best time is now. - Chinese Proverb",
+    "Verily, with hardship comes ease. - Quran 94:6",
+    "Do not be sad, Allah is with us. - Quran 9:40",
+    "The wound is the place where the Light enters you. - Rumi",
+    "In the middle of difficulty lies opportunity. - Albert Einstein",
+    "He who has a why to live can bear almost any how. - Friedrich Nietzsche",
+    "What you seek is seeking you. - Rumi",
+    "The cave you fear to enter holds the treasure you seek. - Joseph Campbell",
+    "Allah does not burden a soul beyond that it can bear. - Quran 2:286",
+    "Be like a tree and let the dead leaves drop. - Rumi"
+];
+
+function randomMemeQuote() {
+    const randomMeme = memes[Math.floor(Math.random() * memes.length)];
+    const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+    
+    const memeImg = document.getElementById('randomMeme');
+    const quoteText = document.getElementById('randomQuote');
+    
+    if (memeImg) memeImg.src = randomMeme;
+    if (quoteText) quoteText.textContent = randomQuote;
+}
+
+// Run on page load
+window.addEventListener('DOMContentLoaded', randomMemeQuote);
+
+// ===================================
 // CONTACT FORM - DISCORD WEBHOOK
 // ===================================
 const contactForm = document.getElementById('contactForm');
