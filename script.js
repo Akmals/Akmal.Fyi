@@ -28,14 +28,16 @@ const memes = [
 const quotes = [
     "The best time to plant a tree was 20 years ago. The second best time is now. - Chinese Proverb",
     "Verily, with hardship comes ease. - Quran 94:6",
-    "Do not be sad, Allah is with us. - Quran 9:40",
+    "“To get what you love, you must first be patient with what you hate. — Al-Ghazali",
     "The wound is the place where the Light enters you. - Rumi",
     "In the middle of difficulty lies opportunity. - Albert Einstein",
     "He who has a why to live can bear almost any how. - Friedrich Nietzsche",
     "What you seek is seeking you. - Rumi",
     "The cave you fear to enter holds the treasure you seek. - Joseph Campbell",
-    "Allah does not burden a soul beyond that it can bear. - Quran 2:286",
-    "Be like a tree and let the dead leaves drop. - Rumi"
+    "Do not allow your heart to take pleasure with the praises of people, nor be saddened by their condemnation. - Al-Ghazali",
+    "Be like a tree and let the dead leaves drop. - Rumi",
+    "Never have I dealt with anything more difficult than my own soul which sometimes helps me and sometimes opposes me. - Al-Ghazali",
+    "Knowledge exists potentially in the human soul like the seed in the soil; by learning the potential becomes actual. — Al-Ghazali"
 ];
 
 function randomMemeQuote() {
