@@ -662,7 +662,7 @@ section {
    CONTACT SECTION
    =================================== */
 .contact-content {
-    max-width: 800px;
+    max-width: 100%;
 }
 
 .contact-text {
@@ -674,15 +674,20 @@ section {
 
 .contact-methods {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: 1.5fr 1fr;
     gap: var(--spacing-md);
+    align-items: start;
+}
+
+@media (max-width: 968px) {
+    .contact-methods {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Contact Form Styles */
 .contact-form-wrapper {
-    grid-column: 1 / -1;
-    max-width: 1000px;
-    margin: 0 auto var(--spacing-lg) auto;
+    /* Form takes left column */
 }
 
 .contact-form {
@@ -690,6 +695,12 @@ section {
     padding: var(--spacing-md);
     border-radius: var(--radius-md);
     border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.contact-panels {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
 }
 
 .form-group {
@@ -807,6 +818,21 @@ section {
 .contact-details p {
     color: var(--text-secondary);
     font-size: 0.95rem;
+}
+
+.resume-download {
+    background: linear-gradient(135deg, rgba(0, 255, 170, 0.1), rgba(0, 153, 255, 0.1));
+    border: 2px solid var(--accent-primary);
+}
+
+.resume-download:hover {
+    background: var(--accent-gradient);
+    color: var(--bg-primary);
+}
+
+.resume-download:hover .contact-details h4,
+.resume-download:hover .contact-details p {
+    color: var(--bg-primary);
 }
 
 /* ===================================
