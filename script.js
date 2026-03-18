@@ -10,6 +10,98 @@ setInterval(() => {
 }, 2000); // Change every 2 seconds
 
 // ===================================
+// PROJECTS DATA
+// Add new projects to the END of this array
+// Featured Projects will automatically show the 3 most recent (excluding Meme Tracker)
+// ===================================
+const projects = [
+    {
+        title: "Meme Tracker",
+        tags: ["Computer Vision", "Python", "OpenCV"],
+        description: "Real-time pose detection system that maps different body poses to meme images. Uses camera feed and computer vision to detect poses and display corresponding meme images alongside the live video feed.",
+        codeLink: "https://github.com/Akmals/MemeTracker",
+        excludeFromFeatured: true  // This won't show in Featured Projects
+    },
+    {
+        title: "Link Converter",
+        tags: ["Docker", "Railway", "API", "Python"],
+        description: "Download media from YouTube, Instagram, and Twitter as MP4 or MP3 files. Built with Docker for easy deployment and integrated with various media APIs. Currently in active development.",
+        codeLink: "https://github.com/Akmals/LinkConverter",
+        liveLink: "https://linkconverter-production.up.railway.app/"
+    },
+    {
+        title: "Graphical Fractals",
+        tags: ["Python", "Parallel Processing", "Graphics", "CUDA (Coming Soon)"],
+        description: "High-performance fractal rendering engine using parallel processing techniques. Generates complex mathematical visualizations including Mandelbrot and Julia sets. Currently in Python, being optimized for CUDA to leverage GPU acceleration on RTX 4060 Ti.",
+        codeLink: "https://github.com/Akmals/GraphicalFractals",
+        liveLink: "https://web-zeta-jet-29.vercel.app/"
+    },
+    {
+        title: "Machine Learning Classification",
+        tags: ["Python", "ML", "Data Science"],
+        description: "Built and trained classification models achieving 91% accuracy through feature engineering and hyperparameter optimization.",
+        codeLink: "https://github.com/Akmals/AI-HAR/blob/main/HAR_Activity_Classification.ipynb"
+    }
+    // Add new projects here - they'll automatically appear in Featured Projects
+];
+
+// ===================================
+// RENDER PROJECTS
+// ===================================
+function renderProjects() {
+    // For Featured Projects on home page (last 3 projects, excluding those marked excludeFromFeatured)
+    const featuredContainer = document.getElementById('featured-projects');
+    if (featuredContainer) {
+        const featuredProjects = projects
+            .filter(p => !p.excludeFromFeatured)
+            .slice(-3)
+            .reverse(); // Get last 3, newest first
+        featuredContainer.innerHTML = featuredProjects.map(project => `
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>${project.title}</h3>
+                    <div class="project-tags">
+                        ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                    </div>
+                </div>
+                <p class="project-description">
+                    ${project.description}
+                </p>
+                <div class="project-footer">
+                    <a href="${project.codeLink}" target="_blank" class="project-link">View Code →</a>
+                    ${project.liveLink ? `<a href="${project.liveLink}" target="_blank" class="project-link live-link">View Project →</a>` : ''}
+                </div>
+            </div>
+        `).join('');
+    }
+    
+    // For All Projects page
+    const allProjectsContainer = document.getElementById('all-projects');
+    if (allProjectsContainer) {
+        allProjectsContainer.innerHTML = projects.map(project => `
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>${project.title}</h3>
+                    <div class="project-tags">
+                        ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                    </div>
+                </div>
+                <p class="project-description">
+                    ${project.description}
+                </p>
+                <div class="project-footer">
+                    <a href="${project.codeLink}" target="_blank" class="project-link">View Code →</a>
+                    ${project.liveLink ? `<a href="${project.liveLink}" target="_blank" class="project-link live-link">View Project →</a>` : ''}
+                </div>
+            </div>
+        `).join('');
+    }
+}
+
+// Run on page load
+window.addEventListener('DOMContentLoaded', renderProjects);
+
+// ===================================
 // RANDOM MEME + QUOTE ON PAGE LOAD
 // ===================================
 const memes = [
@@ -28,16 +120,14 @@ const memes = [
 const quotes = [
     "The best time to plant a tree was 20 years ago. The second best time is now. - Chinese Proverb",
     "Verily, with hardship comes ease. - Quran 94:6",
-    "“To get what you love, you must first be patient with what you hate. — Al-Ghazali",
+    "Do not be sad, Allah is with us. - Quran 9:40",
     "The wound is the place where the Light enters you. - Rumi",
     "In the middle of difficulty lies opportunity. - Albert Einstein",
     "He who has a why to live can bear almost any how. - Friedrich Nietzsche",
     "What you seek is seeking you. - Rumi",
     "The cave you fear to enter holds the treasure you seek. - Joseph Campbell",
-    "Do not allow your heart to take pleasure with the praises of people, nor be saddened by their condemnation. - Al-Ghazali",
-    "Be like a tree and let the dead leaves drop. - Rumi",
-    "Never have I dealt with anything more difficult than my own soul which sometimes helps me and sometimes opposes me. - Al-Ghazali",
-    "Knowledge exists potentially in the human soul like the seed in the soil; by learning the potential becomes actual. — Al-Ghazali"
+    "Allah does not burden a soul beyond that it can bear. - Quran 2:286",
+    "Be like a tree and let the dead leaves drop. - Rumi"
 ];
 
 function randomMemeQuote() {
