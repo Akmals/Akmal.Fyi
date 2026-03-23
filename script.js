@@ -127,7 +127,15 @@ const quotes = [
     "What you seek is seeking you. - Rumi",
     "The cave you fear to enter holds the treasure you seek. - Joseph Campbell",
     "Allah does not burden a soul beyond that it can bear. - Quran 2:286",
-    "Be like a tree and let the dead leaves drop. - Rumi"
+    "Be like a tree and let the dead leaves drop. - Rumi",
+    "Desires make slaves out of kings and patience makes kings out of slaves. - Al-Ghazali",
+    "Knowledge without action is wastefulness and action without knowledge is foolishness. - Al-Ghazali",
+    "To get what you love, you must first be patient with what you hate. - Al-Ghazali",
+    "Knowledge exists potentially in the human soul like the seed in the soil; by learning the potential becomes actual. - Al-Ghazali",
+    "Never have I dealt with anything more difficult than my own soul, which sometimes helps me and sometimes opposes me. - Al-Ghazali",
+    "You have power over your mind - not outside events. Realize this, and you will find strength. - Marcus Aurelius",
+    "The happiness of your life depends upon the quality of your thoughts. - Marcus Aurelius",
+    "When you arise in the morning think of what a privilege it is to be alive, to think, to enjoy, to love. - Marcus Aurelius"
 ];
 
 function randomMemeQuote() {
