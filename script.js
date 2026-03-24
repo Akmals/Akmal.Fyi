@@ -41,6 +41,12 @@ const projects = [
         tags: ["Python", "ML", "Data Science"],
         description: "Built and trained classification models achieving 91% accuracy through feature engineering and hyperparameter optimization.",
         codeLink: "https://github.com/Akmals/AI-HAR/blob/main/HAR_Activity_Classification.ipynb"
+    },
+    {
+        title: "2D to 3D Reconstruction",
+        tags: ["Computer Vision", "3D Graphics", "Python", "WIP"],
+        description: "Converting 2D images into 3D models using computer vision and reconstruction techniques. Work in progress exploring depth estimation and 3D mesh generation.",
+        codeLink: "https://github.com/Akmals/2Dto3D"
     }
     // Add new projects here - they'll automatically appear in Featured Projects
 ];
